@@ -5,14 +5,14 @@ from aiogram import Bot, Dispatcher, types
 from flask import Flask
 import threading, os
 
-TOKEN = os.getenv("TOKEN")  # токен возьмётся из Render
+TOKEN = os.getenv("TOKEN")  # берём токен из Environment Variables
 
 SEARCH_QUERY = "iphone"
 CITY_URL = "https://www.avito.ru/ufa"
-CHECK_INTERVAL = 60  # проверять каждые 60 секунд
+CHECK_INTERVAL = 60  # проверяем каждые 60 секунд
 LAST_IDS = set()
 
-ALLOWED_MODELS = ["xs", "xr", "11", "12", "13", "14", "15", "16", "pro", "max"]
+ALLOWED_MODELS = ["xr", "11", "12", "13", "14", "15", "16", "pro", "max"]
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
